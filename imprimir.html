@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprimiendo Tickets</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="./imprimir.css">
+</head>
+<body>
+    <header class="bg-light navbar navbar_shadow">
+        <div class="container d-flex justify-content-center">
+            <figure class="print_image-container">
+                <img src="./assets/print.png" alt="">
+            </figure>
+            <h1 class="text-center text-body fs-2">Testeando impresiones de tickets</h1>
+        </div>
+
+    </header>
+    <main>
+        <section class="controls_container pt-4 pb-5 bg-light">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12 col-md-6 d-flex align-items-center">
+                        <div class="container-fluid">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <div class="row">
+                                        <input id="product_input" class="form-control" type="text" placeholder="Ingresa un producto..." aria-label="default input example">                                        
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col">
+                                            <input id="product_price_input" type="number" class="form-control" placeholder="Precio">
+                                        </div>
+
+                                        <div class="col">
+                                            <input id="product_quantity_input" type="text" class="form-control" placeholder="Cantidad">
+                                        </div>
+
+                                        <div class="col-3">
+                                            <div id="btn_añadir" class="btn btn-secondary">+ Añadir</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <button id="btn_print" class="btn btn-primary">Imprimir</button>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <div class="container">
+                            <p class="text-center">sample</p>
+                            <div class="container ticket_container d-flex justify-content-center">
+                                <div class="ticket_preview border border-dark">
+                                    
+                                    <!--DISEÑO DEL TICKET-->
+                                    <div class="ticket_wrapper">
+                                        <figure class="ticket_logo">
+                                            <img src="./assets/vaccine.png" alt="">
+                                        </figure>
+
+                                        <div class="fecha_venta">
+                                            <h6 class="ticket_title text-center">TICKET DE VENTA</h6>
+                                            <p class="text-center ticket_location">San Salvador</p>
+                                            <p class="ticket_date text-center">fecha:</p>
+                                        </div>
+
+
+                                        <div class="detalles_venta">                                            
+                                            <div class="cant_container">
+                                                <h6 class="text-start">CANT</h6>
+                                            </div>
+
+                                            <div class="prod_container">
+                                                <h6 class="">PRODUCTO</h6>
+                                            </div>
+
+                                            <div class="prec_container">
+                                                <h6 class="text-end">$$</h6>
+                                            </div>                                            
+                                        </div>
+
+                                        
+                                        <div class="buying_wrapper">
+                                            <div class="cuenta_1"></div> <!--Primer checkpoint para añadir productos-->
+                                            
+                                        </div>
+
+
+                                        <div class="facturacion_wrapper">
+                                            <div class="facturacion_ticket">
+    
+                                                <div class="facturacion_titulo">
+                                                    <p">TOTAL</p>
+                                                </div>
+                                                <div class="total">
+                                                    <p id="total_compra">$num</p>
+                                                </div>
+    
+                                            </div>
+    
+                                            <div class="ticket_footer">
+                                                <p class="ticket_agradecimientos">¡GRACIAS POR SU <br> COMPRA!</p>
+    
+                                                <p class="ticket_el_cielo">Farmacia El Cielo</p>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        
+    </main>
+    <footer class="footer">
+        <div class="container footer_container d-flex align-items-center">
+            <a href="">Pié de página</a>
+        </div>
+    </footer>
+
+    <script src="./imprimir.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!--
+
+    https://parzibyte.me/blog/2017/10/17/imprimir-ticket-en-impresora-termica-usando-javascript/
+-->
