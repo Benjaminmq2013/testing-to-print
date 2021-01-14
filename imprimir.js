@@ -97,8 +97,9 @@ const btn_print = document.getElementById("btn_print")
 btn_print.addEventListener("click", imprimir_ticket)
 
 const ticket_impresion = document.querySelector(".ticket_wrapper")
-function imprimir_ticket(ticket_impresion){    
-       
+function imprimir_ticket(){    
+    window.print()  
+    console.log("Hola mundo")
 }
 
 
