@@ -1,0 +1,42 @@
+figure{
+    margin: 0;
+}
+.main_logo-container{
+    max-width: 60px;
+}
+.img_logo{
+    max-width: inherit;
+}
+.nav_custom{
+    box-shadow: 0px 0px 6px rgb(173, 173, 173);    
+}
+
+.search_wrapper{
+    width: 50%;
+}
+
+
+.recomendaciones_drop{
+    width: 83%;
+}
+
+
+@media screen and (min-width: 1400px){
+    .recomendaciones_drop{
+        width: 85%;
+    }
+}
+
+
+@media screen and (max-width: 1024px){
+    .search_wrapper{
+        width: 75%;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .recomendaciones_drop{
+        width: 75%;
+    }
+}
